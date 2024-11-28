@@ -69,6 +69,7 @@ struct BezierPathKeyframe: Interpolatable {
       cornerRadius.keyframes.contains(where: { $0.value.cgFloatValue > 0 })
     else {
       return path.map { path in
+                    
         BezierPathKeyframe(path: path, cornerRadius: nil)
       }
     }
